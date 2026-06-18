@@ -1,0 +1,19 @@
+.admin-form-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 200;
+  display: flex; align-items: center; justify-content: center; padding: 24px;
+}
+.admin-form-card {
+  background: white; border-radius: var(--radius-lg); padding: 32px;
+  width: 100%; max-width: 680px; max-height: 90vh; overflow-y: auto;
+}
+.admin-form-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.admin-form-header h3 { font-size: 20px; font-weight: 700; }
+.admin-form-header button { background: none; border: none; font-size: 20px; cursor: pointer; color: var(--text-muted); }
+.admin-form { display: flex; flex-direction: column; gap: 16px; }
+.form-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.form-row > div { display: flex; flex-direction: column; gap: 6px; }
+.form-row label, .admin-form > div > label { font-size: 13px; font-weight: 500; color: var(--text-muted); }
+.form-check { display: flex; align-items: center; gap: 8px; }
+.form-check label { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text); cursor: pointer; }
+.form-actions { display: flex; justify-content: flex-end; gap: 12px; padding-top: 8px; }
+textarea.input { resize: vertical; }

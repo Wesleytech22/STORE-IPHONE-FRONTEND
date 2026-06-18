@@ -1,0 +1,27 @@
+.catalog { padding: 40px 0 80px; }
+.catalog-header { margin-bottom: 32px; }
+.catalog-header h1 { font-size: 32px; font-weight: 700; }
+.catalog-header p { color: var(--text-muted); margin-top: 4px; }
+
+.catalog-layout { display: grid; grid-template-columns: 240px 1fr; gap: 32px; align-items: start; }
+
+.catalog-filters { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; position: sticky; top: 80px; }
+.filter-group { margin-bottom: 24px; }
+.filter-group label { display: block; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); margin-bottom: 10px; }
+.filter-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.filter-chip { padding: 6px 14px; border-radius: 20px; border: 1.5px solid var(--border); background: white; font-size: 13px; cursor: pointer; transition: all 0.2s; font-family: inherit; }
+.filter-chip:hover { border-color: var(--accent); color: var(--accent); }
+.filter-chip.active { background: var(--accent); border-color: var(--accent); color: white; }
+
+.catalog-loading, .catalog-empty { text-align: center; padding: 80px 20px; color: var(--text-muted); }
+.catalog-empty p { font-size: 18px; margin-bottom: 16px; }
+
+.pagination { display: flex; justify-content: center; gap: 8px; margin-top: 40px; }
+.page-btn { width: 40px; height: 40px; border-radius: var(--radius-sm); border: 1.5px solid var(--border); background: white; cursor: pointer; font-family: inherit; font-size: 14px; transition: all 0.2s; }
+.page-btn:hover { border-color: var(--accent); color: var(--accent); }
+.page-btn.active { background: var(--accent); border-color: var(--accent); color: white; }
+
+@media (max-width: 768px) {
+  .catalog-layout { grid-template-columns: 1fr; }
+  .catalog-filters { position: static; }
+}
